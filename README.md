@@ -1,24 +1,24 @@
-# 🎲 Voice-Based Dice Game (FastAPI Backend)
+# 🎲 Voice-Based Dice Game
 
 This project is a **voice-controlled dice game** where players verbally answer simple math challenges. The server randomly generates a few dice values, and the player says the total sum out loud. The app checks if the spoken answer matches the correct sum and responds accordingly.
 
-It is built with **FastAPI** and optionally supports a React frontend. Voice input is handled via the **Web Speech API** on the frontend. The backend is fully containerized with Docker and includes automated testing and CI via GitHub Actions.
+It is built with **React** for the frontend and **FastAPI** as the backend API. Voice input is handled via the **Web Speech API** on the frontend. The backend is fully containerized with Docker and includes automated testing and CI via GitHub Actions.
 
 ---
 
-## 🧠 What the Project Does
+## What the Project Does
 
-- 🎲 **Dice Generation**: Server randomly generates dice values (e.g., `[2, 5, 1]`)
-- 🎙️ **Voice Input**: Frontend captures the user’s spoken total (e.g., “eight”)
-- 🧮 **Validation**: Backend checks if the spoken input equals the sum
-- ⏱️ **Reaction Time**: Records how fast the user responded
-- ✅ **Result Message**: Responds with a "Correct" or "Wrong" message and the actual total
+- **Dice Generation**: Server randomly generates dice values (e.g., `[2, 5, 1]`)
+- **Voice Input**: Frontend captures the user’s spoken total (e.g., “eight”)
+- **Validation**: Backend checks if the spoken input equals the sum
+-  **Reaction Time**: Records how fast the user responded
+- **Result Message**: Responds with a "Correct" or "Wrong" message and the actual total
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
-### 🐍 Option A: Run Locally (FastAPI only)
+### Option A: Run Locally (FastAPI only)
 
 > Make sure you have Python 3.11+ and pip installed.
 
