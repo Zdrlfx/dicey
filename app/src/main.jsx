@@ -5,8 +5,6 @@ import Dice from './diceGame.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <>
     <Dice/>
-    </>
   </StrictMode>,
 )
