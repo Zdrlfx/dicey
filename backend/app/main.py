@@ -37,3 +37,5 @@ def submit(payload: SubmitPayload):
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+# github actions test
