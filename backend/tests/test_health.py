@@ -3,6 +3,7 @@ from app.main import app  # adjust if your path is different
 
 client = TestClient(app)
 
+
 def test_health_check():
     response = client.get("/health")
     assert response.status_code == 200
