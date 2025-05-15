@@ -13,7 +13,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
 class SubmitPayload(BaseModel):
     spoken: int
     dice: list[int]
@@ -33,8 +32,6 @@ def submit(payload: SubmitPayload):
         if is_correct
         else f"❌ You said {payload.spoken}, correct was {correct_sum}",
     }
-
-
 
 
 @app.get("/health")
