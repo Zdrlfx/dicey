@@ -13,10 +13,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 class SubmitPayload(BaseModel):
     spoken: int
     dice: list[int]
     time_taken_ms: int
+
 
 @app.post("/submit")
 def submit(payload: SubmitPayload):
@@ -27,8 +29,13 @@ def submit(payload: SubmitPayload):
         "correct": is_correct,
         "total": correct_sum,
         "reaction_time": payload.time_taken_ms,
-        "message": "✅ Correct!" if is_correct else f"❌ You said {payload.spoken}, correct was {correct_sum}"
+        "message": "✅ Correct!"
+        if is_correct
+        else f"❌ You said {payload.spoken}, correct was {correct_sum}",
     }
+
+
+
 
 @app.get("/health")
 def health():

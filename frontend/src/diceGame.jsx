@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
 import { wordsToNumbers } from "./wordsToNum";
 
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const rollFrames = [
   "frame_1", "frame_2", "frame_3", "frame_4", "frame_5", "frame_6", "frame_7"
 ];
@@ -138,7 +139,7 @@ const Dice = () => {
           rolling ? "bg-gray-500" : "bg-blue-600 hover:bg-blue-700"
         }`}
       >
-        {rolling ? "Rolling..." : "Roll 3 Dice"}
+        {rolling ? "Rolling..." : "Roll Dice"}
       </button>
 
       <p className="mt-4 text-gray-600 text-sm">🎤 Microphone: {listening ? "On" : "Off"}</p>
