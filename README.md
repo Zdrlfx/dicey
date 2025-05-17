@@ -31,3 +31,26 @@ source venv/bin/activate   # On Mac/Linux
 
 pip install -r requirements.txt
 uvicorn app.main:app --reload
+```
+### Option B: Run with Docker
+
+```bash
+docker compose up --build
+```
+
+### Folder Structure
+```
+dicey/
+├── backend/
+│ ├── app/
+│ ├── tests/
+│ ├── requirements.txt
+│ └── Dockerfile
+├── frontend/
+│ ├── src/
+│ ├── package.json
+│ └── Dockerfile
+├── docker-compose.yml
+├── .github/workflows/backend.yml
+```
+
