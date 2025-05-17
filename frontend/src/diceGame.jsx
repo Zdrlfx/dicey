@@ -86,7 +86,7 @@ const Dice = () => {
       }
 
       try {
-        const response = await fetch("http://localhost:8000/submit", {
+        const response = await fetch(`${BASE_URL}/submit`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
